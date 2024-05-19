@@ -40,5 +40,7 @@ body {
     cursor: pointer;
 }
 .container #sign_up:hover {
+
     background-color: #45a049;
+
 }

@@ -1,4 +1,4 @@
-// Get the button element
+
 const signUpButton = document.getElementById("signUp");
 
 // Add a click event listener to the button
