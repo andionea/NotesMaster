@@ -6,14 +6,27 @@
     <link rel="stylesheet" href="css/profil.css">
 </head>
 <body>
-    <p>Username: </p>
-    <p>Parola: </p>
-    <p>Email:</p>
-    <button class="green-button" onclick="showPasswordInput()">Schimbă parola</button>
-    <input type="text" id="passwordInput" placeholder="Introdu parola nouă">
-    <button id="modifyButton" onclick="modifyPassword()">Modifică</button>
-    
-    
+    <div class="center-content">
+        <div class="input-group">
+            <label for="username">Username: </label>
+            <input type="text" id="username" placeholder="Se afiseaza username-ul din BD">
+        </div>
+        <div class="input-group">
+            <label for="password">Parola: </label>
+            <input type="password" id="password" placeholder="Se afiseaza parola din BD">
+        </div>
+        <div class="input-group">
+            <label for="email">Email: </label>
+            <input type="email" id="email" placeholder="Se afiseaza email-ul din BD">
+        </div>
+        <div class="spacer"></div>
+        <button class="green-button" onclick="showPasswordInput()">Schimbă parola</button>
+        <div id="new-password-group" class="input-group hidden">
+            <input type="password" id="newPasswordInput" placeholder="Introdu parola nouă">
+            <button id="modifyButton" onclick="modifyPassword()">Modifică parola</button>
+        </div>
+    </div>
+
     <script src="js/profil.js"></script>
 </body>
 </html>
