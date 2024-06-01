@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Main Page</title>
+    <title>NotesMaster</title>
     <link rel="stylesheet" type="text/css" href="css/main.css">
-    <script src="js/script.js"></script>
-    <script src="js/profil.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/header.css">
 </head>
 <body>
-    <div id="header">
-        <img id="logo" src="download.png" alt="Logo">
-        <div id="menuBar">
-            <ul>
-                <li><a href="#" onclick="loadPage('main', 'Home')">Home</a></li>
-                <li><a href="#" onclick="loadPage('quiz', 'Quiz nou')">Quiz nou</a></li>
-                <li><a href="#" onclick="loadPage('profil', 'Profilul meu')">Profilul meu</a></li>
-                <li><a href="index.html">Log Out</a></li>
-            </ul>
+    <header>
+        <h1>NotesMaster</h1>
+        <nav>
+            <a href="main.html">Home</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="notes.html">Notes</a>
+            <a href="profil.html">Profile</a>
+        </nav>
+    </header>
+
+    <div id="container">     
+        <textarea id="text" placeholder="Enter your notes here ..."></textarea>
+        <button id="makeQuiz" v-on:click="makeQuiz()">Test Me!</button>
+        <div v-if="isLoading" class="loading-screen">
+            Loading...
         </div>
     </div>
-    <div id="content">
-
-        <h1>Bine ai venit!</h1>
-        
-    </div>
+    <script type="text/javascript" src="libs/vue.js"></script>
+    <script type="text/javascript" src="libs/axios.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NotesMaster</title>
+    <link rel="stylesheet" href="css/quiz.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/notes.css">
+</head>
+<body>
+    <header>
+        <h1>NotesMaster</h1>
+        <nav>
+            <a href="main.html">Home</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="notes.html">Notes</a>
+            <a href="profil.html">Profile</a>
+        </nav>
+    </header>
+
+    <div id="notes-content">
+        <div id="notes-content">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Created at</th>
+                        <th>Quiz</th>
+                        <th>Content</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="(note, index) in notes" :key="index">
+                        <td>{{ note.Title }}</td>
+                        <td>{{ note.CreatedDate | formatDate }}</td>
+                        <td><button v-on:click="gotoQuiz(note.NoteID)">Take Quiz</button></td>
+                        <td><button v-on:click="gotoContent(note.NoteID)">View Note</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="libs/vue.js"></script>
+    <script type="text/javascript" src="libs/axios.js"></script>
+    <script type="text/javascript" src="js/notes.js"></script>
+</body>
+</html>

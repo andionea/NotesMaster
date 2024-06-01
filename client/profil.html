@@ -2,31 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Profilul meu</title>
+    <title>NotesMaster</title>
     <link rel="stylesheet" href="css/profil.css">
+    <link rel="stylesheet" href="css/header.css">
 </head>
 <body>
+    <script type="text/javascript" src="libs/vue.js"></script>
+    <script type="text/javascript" src="libs/axios.js"></script>
+    <script type="text/javascript" src="js/profil.js"></script>
+
+    <header>
+        <h1>NotesMaster</h1>
+        <nav>
+            <a href="main.html">Home</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="notes.html">Notes</a>
+            <a href="profil.html">Profile</a>
+        </nav>
+    </header>
+
     <div class="center-content">
         <div class="input-group">
             <label for="username">Username: </label>
-            <input type="text" id="username" placeholder="Se afiseaza username-ul din BD">
+            <input type="text" id="username" value="" readonly>
         </div>
         <div class="input-group">
             <label for="password">Parola: </label>
-            <input type="password" id="password" placeholder="Se afiseaza parola din BD">
+            <input type="password" id="password" value="" readonly>
         </div>
         <div class="input-group">
             <label for="email">Email: </label>
-            <input type="email" id="email" placeholder="Se afiseaza email-ul din BD">
+            <input type="email" id="email" value="" readonly>
         </div>
         <div class="spacer"></div>
-        <button class="green-button" onclick="showPasswordInput()">Schimbă parola</button>
+        <button class="green-button" v-on:click="showPasswordInput()">Schimbă parola</button>
         <div id="new-password-group" class="input-group hidden">
             <input type="password" id="newPasswordInput" placeholder="Introdu parola nouă">
-            <button id="modifyButton" onclick="modifyPassword()">Modifică parola</button>
+            <button id="modifyButton" v-on:click="modifyPassword()">Modifică parola</button>
         </div>
+        <div class="logout-button">
+            <button class="red-button" v-on:click="logout()">Logout</button>
     </div>
 
-    <script src="js/profil.js"></script>
 </body>
 </html>

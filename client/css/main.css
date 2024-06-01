@@ -1,149 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display+SC');
+
 body {
     background: rgb(63,94,251);
     background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    color: black;
 }
 
-.menu-button {
-    font-size: 30px;
-    cursor: pointer;
+textarea {
     padding: 10px;
+    width: 96%;
+    height: 82%;
+    line-height: 1.5;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: none;
+    color: black;
+    background-color: white;
+    -webkit-text-fill-color: black;
+}
+
+#container {
+    width: 500px;
     position: absolute;
-    top: 10px;
-    left: 10px;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 400px;
+    padding: 20px;
+}
+
+
+#makeQuiz{
+    width: 50%;
+    padding: 10px;
+    background-color: #4CAF50;
     color: white;
-    background-color: #333;
     border: none;
     border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-left: 25%;
+    font-size: 20px;
+}
+#makeQuiz:hover {
+    background-color: #45a049;
 }
 
-.menu {
-    display: none;
-    position: absolute;
-    top: 50px;
-    left: 10px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    overflow: hidden;
-}
-
-.menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.menu ul li {
-    border-bottom: 1px solid #ccc;
-}
-
-.menu ul li:last-child {
-    border-bottom: none;
-}
-
-.menu ul li a {
-    display: block;
-    padding: 10px 20px;
-    text-decoration: none;
-    color: #333;
-    background-color: #f9f9f9;
-}
-
-.menu ul li a:hover {
-    background-color: #f1f1f1;
-}
-
-h1 {
-    text-align: center;
-    color: white;
-    margin-top: 100px;
-}
-
-body, html {
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
     height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: #282c34;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    font: 40px Arial, sans-serif;
     color: white;
-}
-
-#header {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    background-color: #f2f2f200;
-}
-
-#logo {
-    width: 80px; 
-    height: 80px; 
-    object-fit: cover;
-    margin-right: 20px;
-}
-
-#menuBar {
-    flex-grow: 1;
+    line-height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-#menuBar ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-#menuBar li {
-    margin: 0 10px;
-}
-
-#menuBar li a {
-    color: white;
-    text-decoration: none;
-    padding: 5px 10px;
-    border: 3px solid white;
-    border-radius: 10px;
-    font-size: 18px;
-    transition: all 0.3s ease;
-}
-
-
-h1 {
-    font-size: 50px;
-    text-align: center;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-@media screen and (max-width: 900px) {
-    #header {
-        flex-direction: column;
-        align-items: center;
-    }
-    #menuBar ul {
-        flex-direction: column;
-    }
-    #menuBar li {
-        margin: 10px 0;
-    }
-    #logo {
-        margin-bottom: 20px;
-    }
 }

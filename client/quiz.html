@@ -1,20 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Quiz Page</title>
-    <link rel="stylesheet" href="css/quiz.css">
+    <title>Quiz Generator</title>
+    <link rel="stylesheet" type="text/css" href="css/quiz.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
 </head>
 <body>
-    <div id="container">
-        <div id="textInfo">
-            <h2>Add your notes:</h2>
-            <textarea id="userText" placeholder="Introdu notitele aici..."></textarea>
-            <button id="makeQuizButton">Make quiz!</button>
+    <header>
+        <h1>NotesMaster</h1>
+        <nav>
+            <a href="main.html">Home</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="notes.html">Notes</a>
+            <a href="profil.html">Profile</a>
+        </nav>
+    </header>
+
+    <div id="quiz-content">
+        <div v-for="(question, index) in questions" :key="index">
+            <p id="question">{{ question.Question }}
+            <button @click="toggleAnswer(index)" id="ansButton">Show/Hide Answer</button></p>
+            <p v-if="question.showAnswer" id="answer">{{ question.Answer }}</p>
         </div>
     </div>
     
-    
-    <script src="js/quiz.js"></script>
+    <script type="text/javascript" src="libs/vue.js"></script>
+    <script type="text/javascript" src="libs/axios.js"></script>
+    <script type="text/javascript" src="js/quiz.js"></script>
 </body>
 </html>
