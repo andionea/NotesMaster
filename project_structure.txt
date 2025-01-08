@@ -1,0 +1,49 @@
+.
+│   .gitignore
+│   NotesMaster.session.sql
+│   project_structure.txt
+│   
+├───.vscode
+│       settings.json
+│       
+├───client
+│   │   download.png
+│   │   index.html
+│   │   main.html
+│   │   notes.html
+│   │   profil.html
+│   │   quiz.html
+│   │   signUp.html
+│   │   
+│   ├───css
+│   │       header.css
+│   │       low-poly-grid-haikei.svg
+│   │       main.css
+│   │       notes.css
+│   │       profil.css
+│   │       quiz.css
+│   │       signUp.css
+│   │       style.css
+│   │       
+│   ├───js
+│   │       app.js
+│   │       main.js
+│   │       notes.js
+│   │       profil.js
+│   │       quiz.js
+│   │       signUp.js
+│   │       
+│   └───libs
+│           axios.js
+│           vue.js
+│           
+└───server
+    │   .env
+    │   index.js
+    │   package-lock.json
+    │   package.json
+    │   server.js
+    │   
+    └───node_modules
+
+                        
